@@ -61,9 +61,6 @@ public class HospitalSetController {
         }
     }
 
-    public Result findPageHospSet() {
-
-    }
 
     /**
      * 条件查询带分页
