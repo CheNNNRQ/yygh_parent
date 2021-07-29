@@ -32,6 +32,7 @@ import java.util.zip.Adler32;
 @RestController
 //访问的地址
 @RequestMapping("/admin/hosp/hospitalSet")
+@CrossOrigin
 public class HospitalSetController {
     @Autowired
     private HospitalSetService hospitalSetService;
@@ -44,11 +45,11 @@ public class HospitalSetController {
     @GetMapping("findAll")
     public Result findAllHospitalSet() {
 
-        try {
-            int a = 1 / 0;
-        } catch (Exception e) {
-            throw new YyghException("1/0" ,201);
-        }
+//        try {
+//            int a = 1 / 0;
+//        } catch (Exception e) {
+//            throw new YyghException("1/0" ,201);
+//        }
         List<HospitalSet> list = hospitalSetService.list();
         Result<List<HospitalSet>> ok = Result.ok(list);
         return ok;
